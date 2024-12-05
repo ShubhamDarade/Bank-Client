@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import {
+  InvoiceTab,
+  Login,
+  PageNotFound,
+  ReconciliationPage,
+  Register,
+  ReportSummary,
+  TransactionTab,
+} from "./pages";
+import "./App.css";
+import { Header } from "./components";
+import ProtectedRoutes from "./protectedRoutes/ProtectedRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Toaster />
+      <Routes>
+        {/* <Route path="/" element={<AllBlogs />} /> */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<InvoiceTab />} />
+          <Route path="/invoice" element={<InvoiceTab />} />
+          <Route path="/transaction" element={<TransactionTab />} />
+          <Route path="/reconcile" element={<ReconciliationPage />} />
+          <Route path="/report" element={<ReportSummary />} />
+          <Route path="/*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
