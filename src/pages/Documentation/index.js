@@ -39,6 +39,15 @@ const DocumentPage = () => {
             Invoice ID, Customer Name, Amount, Status, Date, etc.
           </li>
         </ul>
+        Download Invoice Sample File &nbsp;&nbsp;&nbsp;
+        <a
+          download="invoice.xlsx"
+          href="/files/invoice.xlsx"
+          className="docmt-download-button"
+        >
+          Download
+        </a>
+        <br />
         <br />
         <h3 className="docmt-subheading">Steps:</h3>
         <ol className="docmt-ordered-list">
@@ -74,8 +83,16 @@ const DocumentPage = () => {
             Transaction ID, Payment Mode, Amount, Date Processed, Status, etc.
           </li>
         </ul>
+        Download Transaction Sample File &nbsp;&nbsp;&nbsp;
+        <a
+          download="transaction.xlsx"
+          href="/files/transaction.xlsx"
+          className="docmt-download-button"
+        >
+          Download
+        </a>
         <br />
-
+        <br />
         <h3 className="docmt-subheading">Steps:</h3>
         <ol className="docmt-ordered-list">
           <li>

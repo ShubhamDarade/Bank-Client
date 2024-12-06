@@ -29,3 +29,22 @@
   border-radius: 5px;
   object-fit: cover;
 }
+
+.docmt-download-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.docmt-download-button:hover {
+  background-color: #0056b3;
+}
