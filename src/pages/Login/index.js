@@ -30,7 +30,7 @@ const Login = () => {
         localStorage.setItem("ReconcilePro-userAvatar", res.data?.userAvatar);
         dispatch(login());
         toast.success("Login successful!");
-        navigate("/invoice");
+        navigate("/");
       }
     } catch (error) {
       console.error("Error during login:", error);

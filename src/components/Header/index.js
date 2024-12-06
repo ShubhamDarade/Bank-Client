@@ -76,14 +76,14 @@ const Header = () => {
 
       {/* Second Navigation Row */}
       <div className="hdr-sub-header">
-        {/* <NavLink
+        <NavLink
           to="/"
           className={({ isActive }) =>
             `hdr-nav-link ${isActive ? "hdr-active-link" : ""}`
           }
         >
-          Help
-        </NavLink> */}
+          Home
+        </NavLink>
 
         {islogin && (
           <>

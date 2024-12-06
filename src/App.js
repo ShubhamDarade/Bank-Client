@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import {
+  DocumentPage,
   InvoiceTab,
   Login,
   PageNotFound,
@@ -19,12 +20,11 @@ function App() {
       <Header />
       <Toaster />
       <Routes>
-        {/* <Route path="/" element={<AllBlogs />} /> */}
+        <Route path="/" element={<DocumentPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
         <Route element={<ProtectedRoutes />}>
-          <Route path="/" element={<InvoiceTab />} />
           <Route path="/invoice" element={<InvoiceTab />} />
           <Route path="/transaction" element={<TransactionTab />} />
           <Route path="/reconcile" element={<ReconciliationPage />} />

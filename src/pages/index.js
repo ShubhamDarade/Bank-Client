@@ -5,6 +5,7 @@ import InvoiceTab from "./Invoice";
 import ReconciliationPage from "./ReconciliationPage";
 import TransactionTab from "./Transaction";
 import ReportSummary from "./Report";
+import DocumentPage from "./Documentation";
 
 export {
   Register,
@@ -14,4 +15,5 @@ export {
   ReconciliationPage,
   TransactionTab,
   ReportSummary,
+  DocumentPage,
 };

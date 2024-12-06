@@ -40,7 +40,7 @@ const Register = () => {
         dispatch(login());
         toast.success("Registration successful");
 
-        navigate("/invoice");
+        navigate("/");
       }
     } catch (error) {
       console.error("Error during registration:", error);
