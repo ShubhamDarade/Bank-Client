@@ -65,10 +65,13 @@ const InvoiceTab = () => {
 
   const handleFileDownload = async () => {
     try {
+      toast.success(
+        "Invoices downloaded successfully.\nThe file has been sent to your email."
+      );
       const { data } = await downloadInvoicesFile();
       if (data?.success) {
-        toast.success(
-          "Invoices downloaded successfully.\nThe file has been sent to your email."
+        console.log(
+          "Invoices downloaded successfully. The file has been sent to your email."
         );
       } else {
         toast.error(data.message || "Failed to download invoices.");

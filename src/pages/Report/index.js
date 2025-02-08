@@ -17,10 +17,13 @@ const ReportSummary = () => {
 
   const handleFileDownload = async () => {
     try {
+      toast.success(
+        "Reconcile Report downloaded successfully.\nThe file has been sent to your email."
+      );
       const { data } = await reconcileReport();
       if (data?.success) {
-        toast.success(
-          "Reconcile Report downloaded successfully.\nThe file has been sent to your email."
+        console.log(
+          "Reconcile Report downloaded successfully. The file has been sent to your email."
         );
       } else {
         toast.error(data.message || "Failed to download Reconcile Report.");

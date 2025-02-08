@@ -69,10 +69,13 @@ const TransactionTab = () => {
 
   const handleFileDownload = async () => {
     try {
+      toast.success(
+        "Transactions downloaded successfully.\nThe file has been sent to your email."
+      );
       const { data } = await downloadTransactionsFile();
       if (data?.success) {
-        toast.success(
-          "Transactions downloaded successfully.\nThe file has been sent to your email."
+        console.log(
+          "Transactions downloaded successfully. The file has been sent to your email."
         );
       } else {
         toast.error(data.message || "Failed to download transactions.");
